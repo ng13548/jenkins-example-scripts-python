@@ -7,8 +7,6 @@ broker = 'wss://vernemq-testops.pwc.dev.cos.pwtestops.com/mqtt'
 port = 1883
 topic = "python/mqtt"
 # generate client ID with pub prefix randomly
-broker = 'broker.emqx.io'
-port = 1883
 topic = "python/mqtt"
 client_id = 'test-client-id'
 username = 'tsmmqttuser'
