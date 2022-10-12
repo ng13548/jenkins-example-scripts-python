@@ -10,7 +10,7 @@ broker = 'broker.emqx.io'
 port = 8083
 topic = "python/mqtt"
 # generate client ID with pub prefix randomly
-my_client_id = f'python-mqtt-{random.randint(0, 1000)}'
+my_client_id = 'my-client-id'
 # username = 'tsmmqttuser'
 # password = 'ZFjN39bfg4YgCL9d'
 
@@ -47,7 +47,7 @@ def subscribe(client):
 
 def run():
     client = connect_mqtt()
-    print(f"Mqtt Client `{client}`")
+    print("Mqtt Client `{client}`")
     client.loop_start()
     publish(client)
 
