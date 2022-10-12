@@ -25,7 +25,7 @@ def connect_mqtt():
     client = mqtt_client.Client(client_id = my_client_id, transport=mytransport,
                          protocol=mqtt_client.MQTTv311,
                          clean_session=True)
-    print(f"Mqtt Client 1`{client}`")
+    print("Mqtt Client 1`{client}`")
     
 
     # client.username_pw_set(username, password)
@@ -48,8 +48,8 @@ def subscribe(client):
 def run():
     client = connect_mqtt()
     print("Mqtt Client `{client}`")
-    client.loop_start()
-    publish(client)
+    subscribe(client)
+    client.loop_forever()
 
 
 if __name__ == '__main__':
